@@ -185,3 +185,37 @@ class BlockCypherTestNet(object):
     EXT_PUBLIC_KEY = 0x2d413ff  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0x2d40fc3  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/1'/0'/"
+
+
+class FLOMainNet(object):
+    """FLO MainNet version bytes
+
+    Version bytes from:
+    https://github.com/floblockchain/flo/blob/flo-master/src/chainparams.cpp#L155
+    """
+    NAME = "FLO Main Net"
+    COIN = "FLO"
+    SCRIPT_ADDRESS = 0x08  # int(0x08) = 8
+    PUBKEY_ADDRESS = 0x23  # int(0x23) = 35
+    SECRET_KEY = PUBKEY_ADDRESS + 128  # = int(0xa3) = 163
+
+    EXT_PUBLIC_KEY = 0x0134406B
+    EXT_SECRET_KEY = 0x01343C31
+
+    # Confirm this for FLO from @bitspill
+    BIP32_PATH = "m/44'/2'/0'/"
+
+class FLOTestNet(object):
+    """FLO TestNet version bytes
+
+    Primary version bytes from:
+    https://github.com/floblockchain/flo/blob/flo-master/src/chainparams.cpp#L289
+    """
+    NAME = "FLO Test Net"
+    COIN = "FLO"
+    SCRIPT_ADDRESS = 0xc6  # int(0xc6) = 198
+    PUBKEY_ADDRESS = 0x73  # int(0x6f) = 115
+    SECRET_KEY = PUBKEY_ADDRESS + 128  # = int(0xef) = 239
+
+    EXT_PUBLIC_KEY = 0x013440e2
+    EXT_SECRET_KEY = 0x01343c23

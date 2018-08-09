@@ -659,6 +659,10 @@ class Wallet(object):
             response = DashMainNet
         elif network == 'dash_testnet' or network == 'DASHTEST':
             response = DashTestNet
+        elif network == "flo" or network == "FLO":
+            response = FLOMainNet
+        elif network == "flo_testnet" or network == "FLOTEST":
+            response = FLOTestNet
         else:
             response = network
         return response
